@@ -1,0 +1,19 @@
+{
+	"welcomeFile": "test/flpSandbox.html",
+	"routes": [{
+			"source": "/odata/v2",
+			"destination": "pc-backend",
+			"authenticationType": "none"
+		},
+		{
+			"source": "/appconfig",
+			"localDir": ".",
+			"authenticationType": "none"
+		},
+		{
+			"source": "^/(.*)",
+			"localDir": "webapp",
+			"authenticationType": "none"
+		}
+	]
+}

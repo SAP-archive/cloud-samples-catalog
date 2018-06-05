@@ -1,0 +1,238 @@
+{
+	"format_version": 1,
+	"imports": [
+		{
+			"target_table": "CLOUDS_PRODUCTS_PRODUCTS",
+			"source_data": {
+			"data_type": "CSV",
+				"file_name": "Products.csv",
+				"has_header": true
+			},
+			"import_settings": {
+			"import_columns": [
+					"ID",
+					"STOCK_ID",
+					"PRICERANGE_CODE",
+					"CATEGORY_ID",
+					"PRICE",
+					"CURRENCY",
+					"HEIGHT",
+					"WIDTH",
+					"DEPTH",
+					"DIMENSIONUNIT_CODE",
+					"IMAGE",
+					"SUPPLIER_ID",
+					"BASEUNIT_CODE",
+					"WEIGHT",
+					"WEIGHTUNIT_CODE",
+					"NAME",
+					"DESCRIPTION",
+					"CREATED_BYUSER",
+					"MODIFIED_BYUSER",
+					"CREATED_AT",
+					"MODIFIED_AT"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_PRODUCTS_SUPPLIERS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Suppliers.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"ID",
+					"NAME",
+					"EMAILADDRESS",
+					"FAXNUMBER",
+					"PHONENUMBER",
+					"CREATED_BYUSER",
+					"CREATED_AT",
+					"MODIFIED_BYUSER",
+					"MODIFIED_AT"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_PRODUCTS_STOCKS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Stocks.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"ID",
+					"QUANTITY",
+					"AVAILABILITY_CODE",
+					"MINIMUMQUANTITY",
+					"CREATED_BYUSER",
+					"CREATED_AT",
+					"MODIFIED_BYUSER",
+					"MODIFIED_AT"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_PRODUCTS_STOCKAVAILABILITIES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "StockAvailabilities.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_PRODUCTS_CATEGORIES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Categories.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"ID",
+					"NAME",
+					"DESCRIPTION",
+					"CREATED_AT",
+					"MODIFIED_AT",
+					"CREATED_BYUSER",
+					"MODIFIED_BYUSER"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_PRODUCTS_PRICERANGES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "PriceRanges.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_CURRENCIES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Currencies.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_COUNTRIES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Countries.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_LANGUAGES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "Languages.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_MEASURES_UNITS_LENGTHS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "LengthUnits.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_MEASURES_UNITS_AREAS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "AreaUnits.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_MEASURES_UNITS_VOLUMES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "VolumeUnits.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_MEASURES_UNITS_WEIGHTS",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "WeightUnits.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		},
+		{
+			"target_table": "CLOUDS_FOUNDATION_MEASURES_UNITS_BASES",
+			"source_data": {
+				"data_type": "CSV",
+				"file_name": "BaseUnits.csv",
+				"has_header": true
+			},
+			"import_settings": {
+				"import_columns": [
+					"CODE",
+					"NAME"
+				]
+			}
+		}
+	]
+}

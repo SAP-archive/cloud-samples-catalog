@@ -1,0 +1,5 @@
+"CODE","NAME"
+1,"Price: < 100"
+2,"Price: between 100 and 500"
+3,"Price: between 500 and 1000"
+4,"Price: over 1000"

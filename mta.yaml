@@ -1,0 +1,68 @@
+_schema-version: "2.0.0"
+ID: cloud.samples.catalog
+version: 1.0.0
+
+modules:
+ - name: product-catalog-db
+   type: hdb
+   path: db
+   parameters:
+     memory: 256M
+     disk-quota: 256M
+     buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.6.24   # temporary fix
+   requires:
+     - name: product-catalog-hdi-container
+     - name: product-catalog-logging
+
+ - name: product-catalog-java
+   type: java
+   path: srv
+   parameters:
+     memory: 512M
+     disk-quota: 256M
+   build-parameters:
+     requires:
+       - name: product-catalog-db
+         target-path: ""   # <-- build fails if the whole property is missing
+   provides:
+    - name: java
+      properties:
+         url: "${default-url}"
+   requires:
+    - name: product-catalog-hdi-container
+      properties:
+         JBP_CONFIG_RESOURCE_CONFIGURATION: '[tomcat/webapps/ROOT/META-INF/context.xml:
+            {"service_name_for_DefaultDB" : "~{hdi-container-name}"}]'
+    - name: product-catalog-logging
+
+ - name: product-catalog
+   type: html5
+   path: app
+   parameters:
+     memory: 256M
+     disk-quota: 256M
+   build-parameters:
+     builder: grunt
+     requires:
+       - name: product-catalog-java
+         target-path: ""   # <-- build fails if the whole property is missing
+   requires:
+    - name: java
+      group: destinations
+      properties:
+        name: pc-backend
+        url: ~{url}
+        forwardAuthToken: true
+    - name: product-catalog-logging
+
+resources:
+ - name: product-catalog-hdi-container
+   properties:
+     hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: product-catalog-logging
+   type: org.cloudfoundry.managed-service
+   parameters:
+     service: application-logs
+     service-plan: lite

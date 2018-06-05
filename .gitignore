@@ -1,0 +1,27 @@
+# project
+**/.che/
+**/node_modules/
+**/package-lock.json
+**/.npmrc
+**/*.log
+
+# root
+/.mta/
+/*.mtar
+
+# db
+db/**/gen/
+
+# service
+srv/**/edmx/
+srv/.settings/
+srv/target/
+srv/.apt_generated/
+srv/bin/
+srv/.project
+srv/.classpath
+srv/.factorypath
+
+# app
+app/**/dist
+app/**/localService/*.xml
