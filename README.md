@@ -2,13 +2,13 @@
 
 The following samples give you more hands-on practice with the [application programming model for SAP Cloud Platform](https://help.sap.com/viewer//65de2977205c403bbc107264b8eccf4b/Cloud/en-US/00823f91779d4d42aa29a498e0535cdf.html):
 
-* Part 1 - [Foundation](https://github.com/SAP/cloud-samples-foundation)
+* Part 1 - [Foundation](https://github.com/SAP/cloud-samples-foundation/tree/rel-1.0)
 * Part 2 - Product Catalog (current repository)
-* Part 3 - [ITelO Catalog](https://github.com/SAP/cloud-samples-itelo)
+* Part 3 - [ITelO Catalog](https://github.com/SAP/cloud-samples-itelo/tree/rel-1.0)
 
 ### Part 2 - Product Catalog (Reuse Scenario)
 
-The Product Catalog shows a sample business application, developed by reusing the CDS models from [Foundation](https://github.com/SAP/cloud-samples-foundation).
+The Product Catalog shows a sample business application, developed by reusing the CDS models from [Foundation](https://github.com/SAP/cloud-samples-foundation/tree/rel-1.0).
 
 The application allows a user to create, delete and modify products of a product catalog.
 
