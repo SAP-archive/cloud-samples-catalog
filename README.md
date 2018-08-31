@@ -47,6 +47,7 @@ To build and deploy your application or modify it and redeploy, use any of the f
 ## Known Issues
 
 * The read only field _Availability_ is enabled occasionally when creating a new Product.
+* When running the module "srv" as Java Application the log shows "CfDeployException: Failed to deploy application". In the file "mta.yaml", change all occurrences of "product-catalog-java" to "srv". Repeat build and run.
 
 ## Support
 
