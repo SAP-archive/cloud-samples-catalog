@@ -51,7 +51,9 @@ To build and deploy your application or modify it and redeploy, use any of the f
 
 ## Support
 
-This project is provided "as-is": there is no guarantee that raised issues will be answered or addressed in future releases.
+This project is being maintained.  Please log any issues in the [GitHub issues tracking system](https://github.com/SAP/cloud-samples-itelo/issues).
+
+There are no new releases planned at this time.
 
 ## License
 
